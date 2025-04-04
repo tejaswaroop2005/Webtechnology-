@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="proj.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Student Registration Form</h2>
+
+        <form>
+            <div>
+            <label>First Name:</label>
+            <label>Last Name:</label>
+            </div>
+            <br>
+            <div class="row">
+                <input type="text" class="half-width" placeholder="First Name">
+                <input type="text" class="half-width" placeholder="Last Name">
+            </div>
+
+            <div class="row dob-row">
+                <label>Date of Birth:</label>
+                <input type="text" class="dob-field" placeholder="MM">
+                <input type="text" class="dob-field" placeholder="DD">
+                <input type="text" class="dob-field" placeholder="YY">
+            </div>
+            
+
+            <div class="row">
+                <label>Gender:</label>
+                <input type="checkbox" name="gender"> Male
+                <input type="checkbox" name="gender"> Female
+            </div>
+
+            <label>Grade:</label>
+            <input type="text">
+
+            <label>Languages spoken:</label>
+            <input type="text">
+
+            <label>Details of Siblings:</label>
+            <textarea rows="2"></textarea>
+
+            <label>Parent's Information:</label>
+            <table>
+                <tr><th>Father's Name</th><td><input type="text"></td></tr>
+                <tr><th>Father's Qualification</th><td><input type="text"></td></tr>
+                <tr><th>Father's Email & Phone No.</th><td><input type="text"></td></tr>
+                <tr><th>Father's Occupation</th><td><input type="text"></td></tr>
+            </table>
+            <br>
+            <table>
+                <tr><th>Mother's Name</th><td><input type="text"></td></tr>
+                <tr><th>Mother's Qualification</th><td><input type="text"></td></tr>
+                <tr><th>Mother's Email & Phone No.</th><td><input type="text"></td></tr>
+                <tr><th>Mother's Occupation</th><td><input type="text"></td></tr>
+            </table>
+
+            <label>Address:</label>
+            <div class="address-section">Residential Address:</div>
+            <input type="text" class="full-width">
+
+            <label>Payment Details:</label>
+            <div class="payment">
+                <input type="checkbox"> Cash
+                <input type="checkbox"> Check
+                <input type="checkbox"> Card
+            </div>
+
+            <div class="terms">
+                <div class="terms-header">Terms and Conditions:</div>
+                <p>1. I/we certify that the above information provided by me/us is correct.</p>
+                <p>2. I undertake to submit all the documents in original for verification.</p>
+            </div>
+
+            <div class="signature">Signature and Date</div>
+        </form>
+    </div>
+</body>
+</html>
