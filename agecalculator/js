@@ -1,0 +1,32 @@
+function calculateAge() {
+    const dateInput = document.getElementById("date").value;
+    const result = document.getElementById("result");
+
+    
+    const dateRegex = /^(?:\d{4}-\d{2}-\d{2}|\d{1,2}\/\d{1,2}\/\d{4}|\w{3} \d{1,2} \d{4})$/;
+    if (!dateRegex.test(dateInput)) {
+        result.innerText = "Please enter a valid date.";
+        return;
+    }
+
+    const birthDate = new Date(dateInput);
+    if (isNaN(birthDate)) {
+        result.innerText = "Invalid date. Please check the format.";
+        return;
+    }
+
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const m = today.getMonth() - birthDate.getMonth();
+
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+
+    result.innerText = `Your age is: ${age} years old.`;
+}
+
+function clearInput() {
+    document.getElementById("date").value = "";
+    document.getElementById("result").innerText = "";
+}
