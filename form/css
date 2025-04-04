@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 20px 0;
+    overflow-y: auto;
+}
+
+.container {
+    width: 650px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    position: relative;
+}
+
+h2 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-right: 210px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.half-width {
+    width: 48%;
+}
+
+.dob-field {
+    width: 30%;
+    text-align: center;
+}
+
+/* Gender section fix */
+.row input[type="radio"] {
+    margin-left: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+.address-section {
+    background-color: #003366;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.terms {
+    border: 2px solid #003366;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.terms-header {
+    background-color: #003366;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.signature {
+    text-align: right;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+@media screen and (max-height: 900px) {
+    body {
+        height: auto;
+    }
+
+    .container {
+        margin-bottom: 20px;
+    }
+}
+
+
+.row label {
+    min-width: 150px; 
+    display: inline-block; 
+    text-align: left; 
+}
+
+
+.dob-field {
+    width: 50px; 
+    text-align: center;
+    margin-left: 5px; 
+}
+
+
+.row.dob-row {
+    display: flex;
+    align-items: center;
+}
