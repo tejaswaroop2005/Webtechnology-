@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Age Calculator</h2>
+        <p>Instantly calculate age with this tool</p>
+        <input type="text" id="date" placeholder="Enter date">
+        <button class="button" onclick="calculateAge()">Calculate</button>
+        <button class="clear" onclick="clearInput()">Clear</button>
+        <p class="tip">Tip: Use format Jan 7 1992 or MM/DD/YYYY</p>
+        <p id="result"></p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
