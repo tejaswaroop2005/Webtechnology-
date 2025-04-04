@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        p {
+            color: gray;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+        }
+        .button {
+            background-color: rgb(0, 132, 255);
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .clear {
+            background: none;
+            border: none;
+            color: gray;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .tip {
+            font-size: 12px;
+            color: gray;
+            margin-top: 10px;
+        }
+        #result {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Age Calculator</h2>
+        <p>Instantly calculate age with this tool</p>
+        <input type="text" id="date" placeholder="Enter date">
+        <button class="button" onclick="calculateAge()">Calculate</button>
+        <button class="clear" onclick="clearInput()">Clear</button>
+        <p class="tip">Tip: Use format Jan 7 1992 or MM/DD/YYYY</p>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function calculateAge() {
+            const dateInput = document.getElementById("date").value;
+            const result = document.getElementById("result");
+
+            // Validate the input format
+            const dateRegex = /^(?:\d{4}-\d{2}-\d{2}|\d{1,2}\/\d{1,2}\/\d{4}|\w{3} \d{1,2} \d{4})$/;
+            if (!dateRegex.test(dateInput)) {
+                result.innerText = "Please enter a valid date.";
+                return;
+            }
+
+            const birthDate = new Date(dateInput);
+            if (isNaN(birthDate)) {
+                result.innerText = "Invalid date. Please check the format.";
+                return;
+            }
+
+            const today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const m = today.getMonth() - birthDate.getMonth();
+
+            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+
+            result.innerText = `Your age is: ${age} years old.`;
+        }
+
+        function clearInput() {
+            document.getElementById("date").value = "";
+            document.getElementById("result").innerText = "";
+        }
+    </script>
+
+</body>
+</html>
