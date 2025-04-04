@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Services</title>
+    <link rel="stylesheet" href="Template..css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">WebStudio</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Design</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="content">
+            <h1>Web Design & <span>Developement</span> Services</h1>
+            <p>At WebStudio, we craft modern, responsive, and high-performance websites tailored to your needs. Whether you're a startup, a growing business, or an established brand, our expert team ensures your online presence stands out.</p>
+            <br>
+            <button class="cta">Enter</button>
+        </div>
+        <div class="image-placeholder">
+            <img src="image.png" alt="Isometric Web Design">
+        </div>
+    </section>
+</body>
+</html>
